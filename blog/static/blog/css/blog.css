@@ -1,0 +1,136 @@
+/*  blog  */
+body { 
+    margin:0;
+    padding:0;
+    font-family:'Lato', sans-serif;
+}
+
+a, .post_title_detail { 
+    color: #ff0000;
+    text-decoration:none!important; 
+}
+
+h2 a:hover { 
+        color: #ff0000;
+        opacity: 0.5;
+}
+
+.blog_header { 
+    font-weight:normal;
+    border-bottom:1px solid #bbb;
+    padding:0 0 10px 0;
+}
+
+.blog_list_body {
+    border-bottom:1px solid #bbb;
+    opacity: 0.6;
+    width: 80%;
+}
+
+h1,
+h2 {
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    margin:30px 0 0;
+}
+
+#content { 
+    float:left;
+    width:60%;
+    padding:0 0 0 30px; 
+}
+
+p.date { 
+    color:rgb(116, 111, 111);
+    font-family: georgia, serif;
+    font-size: 12px;
+    font-style: italic; 
+}
+
+/*  sidebar  */
+#sidebar { 
+    float:right;
+    width:100%;
+    padding:10px;
+    background:#efefef; 
+    height:auto;
+}
+
+.blog-list-img1 {
+    height: 0;
+    padding-top: 50%;
+    background-size: cover;
+    background-image: url("/media/Lesmills-fitness.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.blog-list-img2 {
+    height: 0;
+    padding-top: 50%;
+    background-size: cover;
+    background-image: url("/media/Lesmills-health.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.blog-list-img3 {
+    height: 0;
+    padding-top: 50%;
+    background-size: cover;
+    background-image: url("/media/Lesmills-nutrition.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+/*  pagination  */
+.pagination { 
+    margin:40px 0; 
+    font-weight:bold;
+}
+
+/*  forms  */
+label { 
+    float:left;
+    clear:both;
+    color:#333;
+    margin-bottom:4px; 
+}
+input, textarea { 
+    clear:both;
+    float:left;
+    margin:0 0 10px;
+    background:#ededed;
+    border:0;
+    padding:6px 10px;
+    font-size:12px;
+}
+input[type=submit] {
+    font-weight:bold;
+    background: black;
+    color: white;
+    border: thin solid transparent;
+    padding:10px 20px;
+    font-size:14px;
+    text-transform:uppercase; 
+}
+.errorlist { 
+    color:#cc0033;
+    float:left;
+    clear:both;
+    padding-left:10px; 
+}
+
+/*  comments  */
+.comment {
+    padding:10px;
+}
+.comment:nth-child(even) {
+    background:#efefef;
+}
+.comment .info {
+    font-weight:bold;
+    font-size:12px;
+    color:#666;
+}

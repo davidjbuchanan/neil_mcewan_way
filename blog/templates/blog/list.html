@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+{% load static %}
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'blog/css/blog.css' %}">
+{% endblock %}
+{% block content %}
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 col-lg-9">
+                <h1 class="blog_header">Live Strong Blog</h1>
+                {% for post in posts %}
+                    <h2>
+                        <a href="{{ post.get_absolute_url }}">
+                            {{ post.title }}
+                        </a>
+                    </h2>
+                    <p class="date">
+                        Published {{ post.publish }} by {{ post.author }}
+                    </p>
+                    {{ post.body|truncatewords:30|linebreaks }}
+                    <hr class="blog_list_body">
+                {% endfor %}
+            </div>
+            <div class="d-none d-lg-block col-lg-3">
+                <div id="sidebar">
+                    <h2>Fitness</h2>
+                    <p>This is my blog.</p>
+                    <div class="col-12 blog-list-img1"></div>
+                    <h2>Health</h2>
+                    <p>This is my blog.</p>
+                    <div class="col-12 blog-list-img2"></div>
+                    <h2>Nutrition</h2>
+                    <p>This is my blog.</p>
+                    <div class="col-12 blog-list-img3"></div>
+                </div>
+                <!--<div id="sidebar">
+                    <h2>Fitness</h2>
+                    <p>This is my blog.</p>
+                    <a href=""><img class="img-fluid" src="../media/Lesmills-fitness.jpg" alt=""></a>
+                    <h2>Health</h2>
+                    <p>This is my blog.</p>
+                    <a href=""><img class="img-fluid" src="../media/Lesmills-health.jpg" alt=""></a>
+                    <h2>Nutrition</h2>
+                    <p>This is my blog.</p>
+                    <a href=""><img class="img-fluid" src="../media/Lesmills-nutrition.jpg" alt=""></a>
+                </div>-->
+            </div>
+        </div>
+    </div>
+    {% include 'pagination.html' with page=posts %}
+{% endblock %}
